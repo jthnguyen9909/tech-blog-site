@@ -1,0 +1,58 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For All Your Tech News</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+    {{!-- <link rel="stylesheet" href="/css/style.css" /> --}}
+  </head>
+
+  <body class="flex-column min-100-vh">
+    <nav class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Tech Twitter</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+      {{!-- {{#unless logged_in}} --}}
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><a
+                href="/login"
+                type="button"
+                class="button"
+                id="login-form-button"
+              >Login</a></li>
+          </ul>
+        </div>
+      {{!-- {{else}} --}}
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><button
+                type="button"
+                class="button"
+                id="logout-button"
+              >Logout</button></li>
+          </ul>
+        </div>
+      {{!-- {{/unless}} --}}
+
+    </nav>
+
+    <main class="col-auto">
+      {{{body}}}
+    </main>
+
+  </body>
+
+  <script src="/js/login.js"></script>
+  <script src="/js/logout.js"></script>
+
+</html>

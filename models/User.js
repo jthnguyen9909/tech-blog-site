@@ -3,9 +3,6 @@ const bcrypt = require("bcrypt");
 const sequelize = require("../config");
 
 class User extends Model {
-  getRandNum() {
-    return Math.floor(Math.random() * 100);
-  }
   checkPassword(password) {
     return bcrypt.compareSync(password, this.password);
   }
